@@ -2,7 +2,6 @@ package uitests;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.base.BaseTestClass;
-import org.ui.conf.ReadPropertyFile;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.AfterMethod;
