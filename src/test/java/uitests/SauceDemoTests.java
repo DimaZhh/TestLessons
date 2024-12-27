@@ -1,13 +1,13 @@
-package lessontests;
+package uitests;
 
-import static org.constants.Errors.EXPECTED_ERROR_LOGIN_TEXT;
+import static org.ui.constants.Errors.EXPECTED_ERROR_LOGIN_TEXT;
 import static org.testng.Assert.assertEquals;
 
-import org.pages.SauceLoginPage;
+import org.ui.pages.SauceLoginPage;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-public class SauceDemoTests extends BaseTestClass {
+public class SauceDemoTests extends BaseUiTestClass {
 
     SauceLoginPage sauceLoginPage;
 

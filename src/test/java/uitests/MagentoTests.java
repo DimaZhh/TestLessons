@@ -1,18 +1,18 @@
-package lessontests;
+package uitests;
 
-import static org.constants.ExpectedButtonText.WATCHES_BUTTON_EXPECTED_TEXT;
+import static org.ui.constants.ExpectedButtonText.WATCHES_BUTTON_EXPECTED_TEXT;
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertNotNull;
 
 import java.util.List;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.WindowType;
-import org.pages.LumaLandingPage;
-import org.pages.LumaWatchesPage;
+import org.ui.pages.LumaLandingPage;
+import org.ui.pages.LumaWatchesPage;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-public class MagentoTests extends BaseTestClass {
+public class MagentoTests extends BaseUiTestClass {
 
     private LumaLandingPage lumaLandingPage;
 

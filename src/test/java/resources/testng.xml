@@ -4,12 +4,12 @@
 <suite name="Suite" verbose="1">
     <test name="Magento">
         <classes>
-            <class name="lessontests.MagentoTests"/>
+            <class name="uitests.MagentoTests"/>
         </classes>
     </test>
     <test name="Sauce">
         <classes>
-            <class name="lessontests.SauceDemoTests"/>
+            <class name="uitests.SauceDemoTests"/>
         </classes>
     </test>
 </suite>

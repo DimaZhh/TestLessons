@@ -1,4 +1,4 @@
-package org.untils;
+package org.ui.untils;
 
 import java.time.Duration;
 import org.openqa.selenium.WebDriver;

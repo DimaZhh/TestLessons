@@ -1,4 +1,4 @@
-package org.constants;
+package org.ui.constants;
 
 public class ExpectedButtonText {
 

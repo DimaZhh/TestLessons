@@ -1,17 +1,17 @@
-package lessontests;
+package uitests;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
-import org.conf.ReadPropertyFile;
+import org.base.BaseTestClass;
+import org.ui.conf.ReadPropertyFile;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
-import org.untils.Waiters;
+import org.ui.untils.Waiters;
 
-public class BaseTestClass {
+public class BaseUiTestClass extends BaseTestClass {
 
     private Waiters waiters = new Waiters();
-    private ReadPropertyFile readPropertyFile = new ReadPropertyFile();
     private WebDriver driver;
     private Actions actions;
 
@@ -30,10 +30,6 @@ public class BaseTestClass {
 
     public Waiters getWaiters() {
         return waiters;
-    }
-
-    public ReadPropertyFile getReadPropertyFile() {
-        return readPropertyFile;
     }
 
     public WebDriver getDriver() {
