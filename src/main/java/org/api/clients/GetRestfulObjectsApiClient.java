@@ -8,7 +8,7 @@ import org.api.BaseApiTestClass;
 
 public class GetRestfulObjectsApiClient {
 
-    public static Response getRestfulObjectsApiResponse(String baseUrl, int statusCode) {
+    public static Response getRestfulObjectsApiResponse(int statusCode) {
 
         Map<String, String> headers = new HashMap<>();
         headers.put("Accept", "application/json");
@@ -16,12 +16,12 @@ public class GetRestfulObjectsApiClient {
         Map<String, String> queryParams = new HashMap<>();
 
         RequestSpecification specification = BaseApiTestClass
-                .getBaseSpecification(baseUrl);
+                .getBaseSpecification(BaseApiTestClass.getReadPropertyFile().getPropertyByValue("api.url"));
 
         return BaseApiTestClass.sendGetRequest(specification, headers, "objects", statusCode);
     }
 
-    public static Object getRestfulObjectsApiResponseByType(String baseUrl, int statusCode) {
+    public static Object getRestfulObjectsApiResponseByType(int statusCode) {
 
         Map<String, String> headers = new HashMap<>();
         headers.put("Accept", "application/json");
@@ -29,7 +29,7 @@ public class GetRestfulObjectsApiClient {
         Map<String, String> queryParams = new HashMap<>();
 
         RequestSpecification specification = BaseApiTestClass
-                .getBaseSpecification(baseUrl);
+                .getBaseSpecification(BaseApiTestClass.getReadPropertyFile().getPropertyByValue("api.url"));
 
         return BaseApiTestClass.sendGetRequest(specification, headers, "objects", statusCode, Object.class);
     }

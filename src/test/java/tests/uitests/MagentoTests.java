@@ -1,4 +1,4 @@
-package uitests;
+package tests.uitests;
 
 import static org.ui.constants.ExpectedButtonText.WATCHES_BUTTON_EXPECTED_TEXT;
 import static org.testng.Assert.assertEquals;

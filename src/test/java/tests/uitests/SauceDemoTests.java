@@ -1,4 +1,4 @@
-package uitests;
+package tests.uitests;
 
 import static org.ui.constants.Errors.EXPECTED_ERROR_LOGIN_TEXT;
 import static org.testng.Assert.assertEquals;

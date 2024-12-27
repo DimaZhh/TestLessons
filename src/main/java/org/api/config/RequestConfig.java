@@ -7,6 +7,7 @@ import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.filter.log.ErrorLoggingFilter;
 import io.restassured.http.ContentType;
 import io.restassured.specification.RequestSpecification;
+import org.api.BaseApiTestClass;
 import org.api.filter.ApiRequestLogger;
 
 public class RequestConfig {
@@ -16,7 +17,8 @@ public class RequestConfig {
                 .addFilter(new ErrorLoggingFilter())
                 .addFilter(new ApiRequestLogger())
                 .setContentType(ContentType.JSON)
-                .setAuth(basic("username", "password"))
+                .setAuth(basic(BaseApiTestClass.getReadPropertyFile().getPropertyByValue("api.username"),
+                        BaseApiTestClass.getReadPropertyFile().getPropertyByValue("api.password")))
                 .setBaseUri(baseUrl)
                 .build();
     }

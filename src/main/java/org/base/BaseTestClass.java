@@ -4,9 +4,9 @@ import org.ui.conf.ReadPropertyFile;
 
 public class BaseTestClass {
 
-    private ReadPropertyFile readPropertyFile = new ReadPropertyFile();
+    private static ReadPropertyFile readPropertyFile = new ReadPropertyFile();
 
-    public ReadPropertyFile getReadPropertyFile() {
+    public static ReadPropertyFile getReadPropertyFile() {
         return readPropertyFile;
     }
 }
