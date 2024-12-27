@@ -7,6 +7,7 @@ import static org.testng.Assert.assertNotNull;
 import java.util.List;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.WindowType;
+import org.ui.BaseUiTestClass;
 import org.ui.pages.LumaLandingPage;
 import org.ui.pages.LumaWatchesPage;
 import org.testng.annotations.BeforeMethod;

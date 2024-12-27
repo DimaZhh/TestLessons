@@ -1,4 +1,4 @@
-package apitests;
+package org.api;
 
 import static io.restassured.RestAssured.given;
 

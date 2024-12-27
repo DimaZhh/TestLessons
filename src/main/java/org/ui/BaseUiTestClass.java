@@ -1,4 +1,4 @@
-package uitests;
+package org.ui;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.base.BaseTestClass;

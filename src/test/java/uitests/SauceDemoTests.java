@@ -3,6 +3,7 @@ package uitests;
 import static org.ui.constants.Errors.EXPECTED_ERROR_LOGIN_TEXT;
 import static org.testng.Assert.assertEquals;
 
+import org.ui.BaseUiTestClass;
 import org.ui.pages.SauceLoginPage;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
