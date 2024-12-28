@@ -19,6 +19,9 @@
             <jackson.version>2.18.2</jackson.version>
             <rest-assured-schema-validator.version>5.5.0</rest-assured-schema-validator.version>
             <lombok.version>1.18.36</lombok.version>
+            <jakarta.validation.version>3.1.0</jakarta.validation.version>
+            <jakarta.el.version>6.0.1</jakarta.el.version>
+            <hibernate-validator.version>8.0.2.Final</hibernate-validator.version>
         </properties>
 
     <dependencies>
@@ -57,6 +60,21 @@
             <artifactId>lombok</artifactId>
             <version>${lombok.version}</version>
             <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>jakarta.validation</groupId>
+            <artifactId>jakarta.validation-api</artifactId>
+            <version>${jakarta.validation.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>jakarta.el</groupId>
+            <artifactId>jakarta.el-api</artifactId>
+            <version>${jakarta.el.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-validator</artifactId>
+            <version>${hibernate-validator.version}</version>
         </dependency>
 
     </dependencies>

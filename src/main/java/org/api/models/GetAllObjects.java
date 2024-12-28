@@ -3,6 +3,8 @@ package org.api.models;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Size;
 import lombok.Data;
 
 @Data
@@ -10,7 +12,13 @@ import lombok.Data;
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class GetAllObjects {
 
+    @NotNull
+    @Size(min = 1)
+    @Size(max = 1000)
     private String id;
+    @NotNull
+    @Size(min = 1)
+    @Size(max = 1000)
     private String name;
     private DeviceData data;
 
