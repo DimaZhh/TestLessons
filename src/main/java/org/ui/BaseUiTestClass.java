@@ -1,8 +1,11 @@
 package org.ui;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import java.time.Duration;
 import org.base.BaseTestClass;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -16,9 +19,14 @@ public class BaseUiTestClass extends BaseTestClass {
 
     @BeforeMethod
     public void setUp() {
-        WebDriverManager driverManager = WebDriverManager.getInstance("CHROME").watch();
-        driverManager.create();
-        driver = driverManager.getWebDriver();
+        WebDriverManager.chromedriver().setup();
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("--remote-allow-origins=*");
+
+        driver = new ChromeDriver(options);
+        driver.manage().window().maximize();
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+
         actions = new Actions(driver);
     }
 

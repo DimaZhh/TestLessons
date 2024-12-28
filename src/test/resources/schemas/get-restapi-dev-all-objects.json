@@ -1,0 +1,73 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Generated schema for Root",
+  "type": "array",
+  "items": {
+    "type": ["object", "null"],
+    "properties": {
+      "id": {
+        "type": "string"
+      },
+      "name": {
+        "type": "string"
+      },
+      "data": {
+        "type": ["object", "null"],
+        "properties": {
+          "Generation": {
+            "type": "string"
+          },
+          "Price": {
+            "type": "string"
+          },
+          "Capacity": {
+            "type": "string"
+          },
+          "Screen size": {
+            "type": "number"
+          },
+          "Color": {
+            "type": "string"
+          },
+          "Description": {
+            "type": "string"
+          },
+          "Strap Colour": {
+            "type": "string"
+          },
+          "Case Size": {
+            "type": "string"
+          },
+          "year": {
+            "type": "number"
+          },
+          "price": {
+            "type": "number"
+          },
+          "CPU model": {
+            "type": "string"
+          },
+          "Hard disk size": {
+            "type": "string"
+          },
+          "generation": {
+            "type": "string"
+          },
+          "color": {
+            "type": "string"
+          },
+          "capacity GB": {
+            "type": "number"
+          },
+          "capacity": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "required": [
+      "id",
+      "name"
+    ]
+  }
+}
