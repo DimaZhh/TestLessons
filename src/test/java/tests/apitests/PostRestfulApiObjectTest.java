@@ -10,17 +10,26 @@ import org.api.utils.JakartaValidator;
 import org.api.utils.JsonReader;
 import org.api.utils.SchemaValidator;
 import org.testng.Assert;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 public class PostRestfulApiObjectTest extends BaseApiTestClass {
 
+    @DataProvider(name = "postRestfulObjects")
+    public Object[][] postRestfulObjectsProvider() {
+        return new Object[][] {
+                {"requests/post-restapi-dev-all-objects.json", "Apple MacBook Pro 16"},
+                {"requests/post-restapi-dev-all-objects_2.json", "Apple MacBook Pro 15"},
+                {"requests/post-restapi-dev-all-objects_3.json", "Apple MacBook Pro 14"}
+        };
+    }
 
-    @Test
+    @Test(dataProvider = "postRestfulObjects")
     @Description("Check get restful api object")
-    public void checkGetRestfulApiObject() {
+    public void checkGetRestfulApiObject(String pathToBody, String expectedName) {
 
         PostAllObjectsRequest postAllObjectsRequest =
-                JsonReader.getDataFromJson(PostAllObjectsRequest.class, "requests/post-restapi-dev-all-objects.json");
+                JsonReader.getDataFromJson(PostAllObjectsRequest.class, pathToBody);
 
         Response response = PostRestfulObjectsApiClient.postRestfulObjectsApiResponse(postAllObjectsRequest, 200);
 
@@ -29,7 +38,7 @@ public class PostRestfulApiObjectTest extends BaseApiTestClass {
         PostAllObjectsResponse postAllObjectsResponse = response.as(PostAllObjectsResponse.class);
         JakartaValidator.isValid(postAllObjectsResponse);
 
-        Assert.assertEquals(postAllObjectsResponse.getName(), "Apple MacBook Pro 16",
+        Assert.assertEquals(postAllObjectsResponse.getName(), expectedName,
                 "Response name is not valid");
     }
 

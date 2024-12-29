@@ -1,0 +1,9 @@
+{
+  "name": "Apple MacBook Pro 14",
+  "data": {
+    "year": 2017,
+    "price": 1150.99,
+    "CPU model": "Intel Core i5",
+    "Hard disk size": "4 TB"
+  }
+}
