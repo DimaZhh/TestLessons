@@ -1,4 +1,4 @@
-package org.api.models;
+package org.api.models.responses;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;
@@ -10,7 +10,7 @@ import lombok.Data;
 @Data
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class GetAllObjects {
+public class GetAllObjectsResponse {
 
     @NotNull
     @Size(min = 1)

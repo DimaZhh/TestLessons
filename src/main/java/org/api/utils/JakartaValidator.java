@@ -5,8 +5,11 @@ import jakarta.validation.Validation;
 import jakarta.validation.Validator;
 import jakarta.validation.ValidatorFactory;
 import java.util.Set;
+import lombok.AccessLevel;
+import lombok.NoArgsConstructor;
 import org.hibernate.validator.messageinterpolation.ParameterMessageInterpolator;
 
+@NoArgsConstructor(access = AccessLevel.PRIVATE)
 public class JakartaValidator {
 
     private static final ValidatorFactory factory = Validation.byDefaultProvider()

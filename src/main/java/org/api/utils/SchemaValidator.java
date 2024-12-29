@@ -6,11 +6,14 @@ import static org.api.utils.JsonMapper.getJsonMapper;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import io.restassured.module.jsv.JsonSchemaValidator;
 import io.restassured.response.Response;
+import lombok.AccessLevel;
+import lombok.NoArgsConstructor;
 
+@NoArgsConstructor(access = AccessLevel.PRIVATE)
 public class SchemaValidator {
 
     public static void validateJsonSchema(Object responseObject, String schemaPath) throws JsonProcessingException {
-        
+
         String jsonResponse = getJsonMapper().writeValueAsString(responseObject);
 
         given()

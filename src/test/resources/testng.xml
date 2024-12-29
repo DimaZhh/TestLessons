@@ -12,4 +12,10 @@
             <class name="tests.uitests.SauceDemoTests"/>
         </classes>
     </test>
+    <test name="DevApiTests">
+        <classes>
+            <class name="tests.apitests.GetRestfulApiObjectTest"/>
+            <class name="tests.apitests.PostRestfulApiObjectTest"/>
+        </classes>
+    </test>
 </suite>

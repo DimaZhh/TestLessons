@@ -47,10 +47,12 @@ public class BaseApiTestClass extends BaseTestClass {
     public static Response sendPostRequest(RequestSpecification requestSpecification,
                                           Map<String, String> headers,
                                           String path,
+                                          Object body,
                                           int statusCode) {
 
         return requestSpecification.headers(headers).when()
                 .log().all()
+                .body(body)
                 .post(path)
                 .then()
                 .assertThat().statusCode(statusCode)
@@ -61,11 +63,12 @@ public class BaseApiTestClass extends BaseTestClass {
     public static <T> T sendPostRequest(RequestSpecification requestSpecification,
                                        Map<String, String> headers,
                                        String path,
-                                       int statusCode,
+                                       int statusCode, Object body,
                                        Class<T> responseType) {
 
         return requestSpecification.headers(headers).when()
                 .log().all()
+                .body(body)
                 .post(path)
                 .then()
                 .assertThat().statusCode(statusCode)
